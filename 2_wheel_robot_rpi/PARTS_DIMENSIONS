@@ -1,0 +1,40 @@
+PARTS DIMENSIONS
+
+Boards screws:
+    Diameter: 4 mm
+    Length: ?
+
+RPi and pibow screws:
+    Diameter: 3 mm
+
+Breadboards: 
+    SFE ref: PRT-12044 Breadboard - Mini Modular (Red)
+    Dimensions (mm): 47 x 35 x 10
+
+Micro metal DC gearmotors (95:1):
+    Pimoroni ref: COM-MOT-95:1
+    Motor Size: 26 x 12 x 10mm
+    Shaft Size: 3mm Diameter x 10mm Length
+
+Pololu Wheels: 
+    Pimoroni ref: #1420
+    Width: 8mm
+    Radius: 60mm
+
+RaspberryPi Model B: 
+    Dimensions (mm): 85.6 × 53.98 × 17
+    Weight: 44.885 g
+
+Pibow: 
+    Dimensions (mm): 98 x 65.5 x 18
+
+Battery Holder:
+    3xAA Selectronic.fr ref: 15.9215
+    Dimensions (mm): 58 x 48 x 17
+
+ON/OFF switch:
+    SFE ref: COM-09609 SPDT Slide Switch
+
+Ball Caster:
+    SFE ref: ROB-08909 Ball Caster Metal - 3/8"
+
