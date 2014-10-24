@@ -4,15 +4,14 @@
 // Copyright (c) 2014 Jérémie DECOCK <jd.jdhp@gmail.com>
 
 
-// RASPICAM FRONT ///////////////////////////
+// RASPICAM BACK ////////////////////////////
 
-module raspicam_front() {
+module raspicam_back() {
 
     // Local const
     screw_radius = 1.5;
     screw_spacing_x = 12.5;
     screw_spacing_y = 21;
-    camera_slot_width = 9;
 
     // Four screw holes
     for (i = [-1, 1]) {    
@@ -23,27 +22,22 @@ module raspicam_front() {
         }
     }
 
-    // Camera slot
-    translate([-screw_spacing_x/2, 0, 0]){
-        cube([camera_slot_width, camera_slot_width, board_height+1], center=true);
-    }
-
 }
 
 // TEST /////////////////////////////////////
 
-board_width=30;  // x
-board_depth=30;  // y
-board_height=3;  // z
+board_width=20;   // x
+board_depth=30;   // y
+board_height=2;   // z
 
 // Check vars
 if(board_width < 16.5) echo("WARNING: board_width should be greater than or equal to 98");
 if(board_depth < 25)   echo("WARNING: board_depth should be greater than or equal to 65.5");
 
-translate([0, -raspicam_front_depth/2 - 5, raspicam_front_height/2]) {
+translate([0, raspicam_back_depth/2 + 5, raspicam_back_height/2]) {
     difference() {
         cube([board_width, board_depth, board_height], center=true);
-        #raspicam_front();
+        #raspicam_back();
     }
 }
 
