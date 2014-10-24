@@ -19,13 +19,13 @@ Micro metal DC gearmotors (95:1):
 Pololu Wheels: 
     Pimoroni ref: #1420
     Width: 8mm
-    Radius: 60mm
+    Diameter: 60mm
 
 RaspberryPi Model B: 
     Dimensions (mm): 85.6 × 53.98 × 17
     Weight: 44.885 g
 
-Pibow: 
+Pibow (model b): 
     Dimensions (mm): 98 x 65.5 x 18
 
 Battery Holder:
@@ -36,5 +36,5 @@ ON/OFF switch:
     SFE ref: COM-09609 SPDT Slide Switch
 
 Ball Caster:
-    SFE ref: ROB-08909 Ball Caster Metal - 3/8"
+    SFE ref: ROB-08909 Ball Caster Metal - 3/8" (diameter = 9.525mm)
 
