@@ -12,7 +12,7 @@ module raspicam_front() {
     screw_radius = 1.5;
     screw_spacing_x = 12.5;
     screw_spacing_y = 21;
-    camera_slot_width = 9;
+    camera_slot_width = 10;
 
     // Four screw holes
     for (i = [-1, 1]) {    
