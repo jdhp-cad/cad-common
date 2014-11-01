@@ -6,7 +6,7 @@
 
 // RASPICAM BACK ////////////////////////////
 
-module raspicam_back() {
+module raspicam_back(board_height) {
 
     // Local const
     screw_radius = 1.5;
@@ -26,18 +26,18 @@ module raspicam_back() {
 
 // TEST /////////////////////////////////////
 
-board_width=20;   // x
-board_depth=30;   // y
-board_height=2;   // z
+raspicam_back_width = 20;   // x
+raspicam_back_depth = 30;   // y
+raspicam_back_height = 2;   // z
 
 // Check vars
-if(board_width < 16.5) echo("WARNING: board_width should be greater than or equal to 98");
-if(board_depth < 25)   echo("WARNING: board_depth should be greater than or equal to 65.5");
+if(raspicam_back_width < 16.5) echo("WARNING: board_width should be greater than or equal to 98");
+if(raspicam_back_depth < 25)   echo("WARNING: board_depth should be greater than or equal to 65.5");
 
-translate([0, raspicam_back_depth/2 + 5, raspicam_back_height/2]) {
+translate([0, 0, raspicam_back_height/2]) {
     difference() {
-        cube([board_width, board_depth, board_height], center=true);
-        #raspicam_back();
+        cube([raspicam_back_width, raspicam_back_depth, raspicam_back_height], center=true);
+        #raspicam_back(board_height=raspicam_back_height);
     }
 }
 
