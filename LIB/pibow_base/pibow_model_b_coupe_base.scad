@@ -10,7 +10,7 @@
 //
 // RPi and pibow screws:
 //     Diameter: 3 mm
-module pibow_b_base() {
+module pibow_b_base(screw_height) {
 
     // Local const
     screw_radius = 1.5;
@@ -21,14 +21,14 @@ module pibow_b_base() {
     for (i = [-1, 1]) {    
         for (j = [-1, 1]) {    
             translate([i*screw_spacing_x/2, j*screw_spacing_y/2, 0]) {        
-                cylinder(r=screw_radius, h=board_height+1, center=true, $fn=50);
+                cylinder(r=screw_radius, h=screw_height+1, center=true, $fn=50);
             }
         }
     }
 
     // RPi screw holes
-    translate([-17.5, 9.5, 0]) cylinder(r=screw_radius, h=board_height+1, center=true, $fn=50);
-    translate([37, -15, 0])    cylinder(r=screw_radius, h=board_height+1, center=true, $fn=50);
+    translate([-17.5, -9.5, 0]) cylinder(r=screw_radius, h=screw_height+1, center=true, $fn=50);
+    translate([37, 15, 0])    cylinder(r=screw_radius, h=screw_height+1, center=true, $fn=50);
 
 }
 
@@ -45,7 +45,7 @@ if(board_depth < 65.5) echo("WARNING: board_depth should be greater than or equa
 translate([0, 0, board_height/2]) {
     difference() {
         cube([board_width, board_depth, board_height], center=true);
-        #pibow_b_base();
+        #pibow_b_base(board_height);
     }
 }
 
