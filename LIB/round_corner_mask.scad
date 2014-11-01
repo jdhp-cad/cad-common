@@ -24,3 +24,12 @@ module board_round_4_corner_mask(radius, width, depth, height) {
     translate([ spacing_x/2, -spacing_y/2, 0]) mirror([1,0,0]) round_corner_mask(radius, spacing_x, spacing_y, height);
 }
 
+module board_round_2_corner_mask(radius, width, depth, height) {
+    spacing_x = width - 2 * radius;
+    spacing_y = depth - 2 * radius;
+    height = height + 1;
+
+    translate([ spacing_x/2,  spacing_y/2, 0]) mirror([1,1,0]) round_corner_mask(radius, spacing_x, spacing_y, height);
+    translate([ spacing_x/2, -spacing_y/2, 0]) mirror([1,0,0]) round_corner_mask(radius, spacing_x, spacing_y, height);
+}
+
