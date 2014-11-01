@@ -7,7 +7,7 @@
 
 // Tripod fixation screw:
 //     Diameter: 7 mm
-module tripod_base() {
+module tripod_base(board_height) {
 
     // Local const
     screw_radius = 7;
@@ -26,7 +26,7 @@ board_height = 3;    // z
 translate([0, 0, board_height/2]) {
     difference() {
         cube([board_width, board_depth, board_height], center=true);
-        #tripod_base();
+        #tripod_base(board_height=board_height);
     }
 }
 
